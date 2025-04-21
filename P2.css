@@ -1,0 +1,60 @@
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    flex-flow: row;
+    justify-content: flex-start;
+    align-items: stretch;
+    align-content: stretch;
+    flex-wrap: nowrap;
+    overflow: scroll;
+}
+.flex-item {
+    flex: 0 0 200px;
+    align-self: stretch;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-auto-rows: 200px;
+    align-content: start;
+    overflow: scroll;
+}
+
+.box-shadow {
+    width: 200px;
+    height: 100px;
+    background-color: lightgray;
+    box-shadow: 4px 4px 8px 0 rgb(12, 11, 11), 4px 6px 20px 0 rgb(200, 236, 200);
+    padding: 20px;
+    margin: 20px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 8px 8px 16px 0px rgba(216, 230, 31, 0.836), 8px 8px 16px 0px rgba(187, 116, 116, 0.2);
+    padding: 12px 16px;
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    color: black;
+}
+
+body {
+    counter-reset: x;
+}
+
+h2::before {
+    counter-increment: x;
+    content: counter(x) ": ";
+}
